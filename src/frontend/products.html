@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品一覧 - お買い物エージェント</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="app-title">商品一覧</h1>
+        <div class="header-actions">
+          <button class="btn btn-secondary" id="backBtn">チャットに戻る</button>
+          <button class="btn btn-secondary" id="favoritesBtn">お気に入り</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+      <div class="content-layout">
+        <!-- 左サイドバー（フィルター） -->
+        <aside class="filter-sidebar">
+          <div class="filter-section">
+            <h3 class="filter-title">検索条件</h3>
+            
+
+            
+            <div class="filter-group">
+              <label for="priceFilter">価格</label>
+              <div class="price-input-container">
+                <input type="number" id="priceMin" class="price-input" placeholder="下限" min="0" step="1000">
+                <span class="price-separator">〜</span>
+                <input type="number" id="priceMax" class="price-input" placeholder="上限" min="0" step="1000">
+                <span class="price-unit">円</span>
+              </div>
+              <div class="price-presets">
+                <button class="price-preset-btn" data-min="0" data-max="1000">1,000円以下</button>
+                <button class="price-preset-btn" data-min="1000" data-max="3000">1,000〜3,000円</button>
+                <button class="price-preset-btn" data-min="3000" data-max="5000">3,000〜5,000円</button>
+                <button class="price-preset-btn" data-min="5000" data-max="10000">5,000〜10,000円</button>
+                <button class="price-preset-btn" data-min="10000" data-max="">10,000円以上</button>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <label for="sortFilter">並び順</label>
+              <select id="sortFilter" class="filter-select">
+                <option value="relevance">関連度順</option>
+                <option value="price-low">価格が安い順</option>
+                <option value="price-high">価格が高い順</option>
+                <option value="rating">評価順</option>
+                <option value="new">新着順</option>
+              </select>
+            </div>
+            
+            <div class="filter-actions">
+              <button class="btn btn-primary" id="applyFiltersBtn">条件を適用</button>
+              <button class="btn btn-secondary" id="clearFiltersBtn">条件をクリア</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 右メインエリア（商品グリッド） -->
+        <div class="main-products-area">
+          <div class="products-header">
+            <div class="results-info">
+              <span id="resultsCount">0件の商品</span>
+            </div>
+            <div class="view-options">
+              <button class="btn btn-sm btn-secondary" id="gridViewBtn" data-view="grid">グリッド</button>
+              <button class="btn btn-sm btn-secondary" id="listViewBtn" data-view="list">リスト</button>
+            </div>
+          </div>
+          
+          <div class="products-grid" id="productsGrid">
+            <!-- 商品カードはJavaScriptで動的に生成 -->
+          </div>
+          
+          <!-- ページネーション -->
+          <div class="pagination" id="pagination">
+            <!-- ページネーションはJavaScriptで動的に生成 -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ローディングオーバーレイ -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+      <div class="loading-content">
+        <div class="loading-spinner large"></div>
+        <p class="loading-text">商品を読み込み中...</p>
+      </div>
+    </div>
+
+    <!-- 商品詳細モーダル -->
+    <div class="modal-overlay" id="productModal" style="display: none;">
+      <div class="modal-content large">
+        <div class="modal-header">
+          <h3 id="modalTitle">商品詳細</h3>
+          <button class="modal-close" id="closeProductModal">&times;</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- 商品詳細はJavaScriptで動的に生成 -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="addToFavoritesBtn">お気に入りに追加</button>
+          <button class="btn btn-secondary" id="closeModalBtn">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/utils.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html> 

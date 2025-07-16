@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お買い物エージェント - チャット</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="app-title">お買い物エージェント</h1>
+        <div class="header-actions">
+          <button class="btn btn-secondary" id="productsBtn">商品一覧</button>
+          <button class="btn btn-secondary" id="resetBtn">リセット</button>
+          <button class="btn btn-secondary" id="helpBtn">ヘルプ</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+      <!-- チャットエリア -->
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <!-- メッセージはJavaScriptで動的に追加 -->
+        </div>
+        
+        <!-- サジェストボタンエリア -->
+        <div class="suggest-container" id="suggestContainer">
+          <div class="suggest-label">想定される次の質問：</div>
+          <div class="suggest-buttons" id="suggestButtons">
+            <!-- サジェストボタンはJavaScriptで動的に生成 -->
+          </div>
+        </div>
+
+        <!-- 入力エリア -->
+        <div class="input-container">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="messageInput" 
+              class="message-input" 
+              placeholder="メッセージを入力してください..."
+              maxlength="1000"
+            >
+            <button class="btn btn-primary send-btn" id="sendBtn">
+              <span class="btn-text">送信</span>
+              <span class="btn-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+    <!-- ローディングオーバーレイ -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+      <div class="loading-content">
+        <div class="loading-spinner large"></div>
+        <p class="loading-text">商品を検索中...</p>
+      </div>
+    </div>
+
+    <!-- エラーモーダル -->
+    <div class="modal-overlay" id="errorModal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>エラー</h3>
+          <button class="modal-close" id="closeErrorModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="errorMessage">エラーが発生しました。</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="retryBtn">再試行</button>
+          <button class="btn btn-secondary" id="cancelBtn">キャンセル</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/utils.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html> 
