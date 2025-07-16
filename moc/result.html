@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>検索結果 - お買い物エージェント</title>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #ccc; padding: 24px; }
+    .item-list { margin: 0; padding: 0; list-style: none; }
+    .item { display: flex; align-items: center; border-bottom: 1px solid #eee; padding: 16px 0; }
+    .item:last-child { border-bottom: none; }
+    .item-img { width: 80px; height: 80px; background: #eee; border-radius: 8px; margin-right: 20px; display: flex; align-items: center; justify-content: center; }
+    .item-img img { max-width: 70px; max-height: 70px; }
+    .item-info { flex: 1; }
+    .item-name { font-size: 1.1em; font-weight: bold; margin-bottom: 4px; }
+    .item-price { color: #0078d7; font-size: 1em; margin-bottom: 8px; }
+    .item-actions { display: flex; gap: 8px; }
+    button, a.btn-link { padding: 6px 16px; font-size: 0.95em; border: none; border-radius: 4px; background: #0078d7; color: #fff; cursor: pointer; text-decoration: none; }
+    button:hover, a.btn-link:hover { background: #005fa3; }
+    .fav-btn { background: #ffb300; color: #333; }
+    .fav-btn:hover { background: #ff9800; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>検索結果</h2>
+    <ul class="item-list">
+      <li class="item">
+        <div class="item-img"><img src="https://dummyimage.com/70x70/cccccc/333333&text=商品1" alt="商品1"></div>
+        <div class="item-info">
+          <div class="item-name">晴雨兼用日傘 UVカット 軽量</div>
+          <div class="item-price">¥2,980</div>
+          <div class="item-actions">
+            <button class="fav-btn">お気に入り</button>
+            <a href="#" class="btn-link">詳細</a>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item-img"><img src="https://dummyimage.com/70x70/cccccc/333333&text=商品2" alt="商品2"></div>
+        <div class="item-info">
+          <div class="item-name">折りたたみ日傘 軽量 コンパクト</div>
+          <div class="item-price">¥1,980</div>
+          <div class="item-actions">
+            <button class="fav-btn">お気に入り</button>
+            <a href="#" class="btn-link">詳細</a>
+          </div>
+        </div>
+      </li>
+      <!-- ... -->
+    </ul>
+  </div>
+</body>
+</html> 

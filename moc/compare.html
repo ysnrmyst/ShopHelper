@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>店舗比較 - お買い物エージェント</title>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    .container { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #ccc; padding: 24px; }
+    .product-title { font-size: 1.2em; font-weight: bold; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    th, td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
+    th { background: #f1f8e9; }
+    tr:last-child td { border-bottom: none; }
+    .fav-btn { padding: 6px 16px; font-size: 0.95em; border: none; border-radius: 4px; background: #ffb300; color: #333; cursor: pointer; }
+    .fav-btn:hover { background: #ff9800; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-title">HDMIケーブル 2m</div>
+    <table>
+      <tr>
+        <th>ショップ</th>
+        <th>価格</th>
+        <th>送料</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>店舗AA</td>
+        <td>¥980</td>
+        <td>¥200</td>
+        <td><button class="fav-btn">この店舗をお気に入り</button></td>
+      </tr>
+      <tr>
+        <td>店舗BB</td>
+        <td>¥1,050</td>
+        <td>無料</td>
+        <td><button class="fav-btn">この店舗をお気に入り</button></td>
+      </tr>
+      <!-- ... -->
+    </table>
+  </div>
+</body>
+</html> 
