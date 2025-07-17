@@ -113,8 +113,8 @@ class ChatManager {
       const data = await response.json();
       
       // エージェントの応答を追加
-      if (data.response) {
-        this.addAgentMessage(data.response);
+      if (data.message) {
+        this.addAgentMessage(data.message);
       }
       
       // 商品情報がある場合

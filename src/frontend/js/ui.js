@@ -32,7 +32,7 @@ class UIManager {
     
     // 商品一覧ボタン
     this.productsBtn.addEventListener('click', () => {
-      window.location.href = 'products.html';
+      window.location.href = '/products';
     });
     
     // ヘルプボタン

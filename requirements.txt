@@ -1,5 +1,9 @@
-langchain-community==0.3.20
-wikipedia==1.4.0
-crewai-tools==0.51.1
-google-adk
-google-cloud-logging
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+requests==2.31.0
+aiofiles==23.2.1
+jinja2==3.1.2

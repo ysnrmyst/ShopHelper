@@ -71,7 +71,7 @@ class ProductsManager {
     
     // ナビゲーション
     this.backBtn.addEventListener('click', () => {
-      window.location.href = 'index.html';
+      window.location.href = '/';
     });
     
     this.favoritesBtn.addEventListener('click', () => {
